@@ -4,11 +4,9 @@ import History from './components/history';
 import StatusMessage from './components/statusMessage';
 import './styles.scss';
 import { calculateWinner } from './winner';
-
+const NEW_GAME = [{ square: Array(9).fill(null), isNextX: false }];
 function App() {
-  const [history, setHistory] = useState([
-    { square: Array(9).fill(null), isNextX: false },
-  ]);
+  const [history, setHistory] = useState(NEW_GAME);
   const [currMove, setCurrMove] = useState(0);
 
   console.log({ historylength: history.length, currMove });

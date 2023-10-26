@@ -50,6 +50,9 @@ function App() {
 
   return (
     <div className="app">
+      <h1>
+        TIC-<span className="text-green">TAC</span>-TOE
+      </h1>
       <StatusMessage winner={winner} gamingBoard={gamingBoard} />
       <Board
         square={gamingBoard.square}
@@ -70,7 +73,7 @@ function App() {
       >
         NEW GAME
       </button>
-      <h2>Current Game</h2>
+      <h2 style={{ fontWeight: 'normal' }}>Current Game</h2>
       <History history={history} moveTo={moveTo} currMove={currMove} />
     </div>
   );
